@@ -9,10 +9,10 @@ namespace HSC
 
     void Log::Init()
     {
-        Ref<spdlog::sinks::basic_file_sink_mt> FileSink = CreateRef<spdlog::sinks::basic_file_sink_mt>("HSC.log", true);
+        Ref<spdlog::sinks::basic_file_sink_mt> FileSink = CreateRef<spdlog::sinks::basic_file_sink_mt>("..\\HSC.log", true);
         FileSink->set_pattern("[%l] %n: %v");
 
-        Logger = CreateRef<spdlog::logger>("HSC", FileSink);
+        Logger = CreateRef<spdlog::logger>("Backend", FileSink);
         spdlog::register_logger(Logger);
         Logger->set_level(spdlog::level::trace);
         Logger->flush_on(spdlog::level::trace);

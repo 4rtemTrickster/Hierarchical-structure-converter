@@ -1,5 +1,7 @@
 #include "HSCpch.h"
 
+#include <future>
+
 #include "Log/Log.h"
 
 int APIENTRY WinMain(HINSTANCE hInstance,
@@ -9,5 +11,9 @@ int APIENTRY WinMain(HINSTANCE hInstance,
 {
     HSC::Log::Init();
 
+    //std::async(std::launch::async, [](){);});
+
+    system("..\\Frontend\\Frontend.exe");
+        
     return 0;
 }
