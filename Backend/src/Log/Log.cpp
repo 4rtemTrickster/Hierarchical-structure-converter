@@ -17,6 +17,6 @@ namespace HSC
         Logger->set_level(spdlog::level::trace);
         Logger->flush_on(spdlog::level::trace);
 
-        HSC_INFO("Logger initialized!");
+        HSC_TRACE("Logger initialized!");
     }
 }
